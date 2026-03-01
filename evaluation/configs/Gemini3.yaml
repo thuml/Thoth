@@ -1,0 +1,17 @@
+paths:
+  inference_dir: "inference_results"
+  results_dir: "results"
+
+model:
+    model_type: "close_source"
+    model_name: "gemini-3-flash-preview"
+    base_url: ""
+    api_key: ""
+    temperature: 0.0
+    max_tokens: 10
+
+datasets:
+    chattime:
+        test_path: "../datasets/ChatTime/test_chattime.json"
+        vali_path: "../datasets/ChatTime/validation_chattime.json"
+        num_fewshot: 3
