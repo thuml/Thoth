@@ -44,7 +44,7 @@ print(response)
 
 ## 💻 Installation
 
-```python
+```bash
 conda create -n thoth python=3.10
 conda activate thoth
 pip install -r requirements.txt
@@ -56,7 +56,7 @@ Refer to the YAML files under `evaluation/configs/` for setup. Note that additio
 
 To start the evaluation with the default configuration, simply run:
 
-```python
+```bash
 cd evaluation
 bash ./scripts/Thoth.sh
 ```
