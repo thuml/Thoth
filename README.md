@@ -26,8 +26,11 @@ model_id = "thuml/Thoth-30B-A3B"
 tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", dtype=torch.bfloat16, trust_remote_code=True).eval()
 
-# Your question here
-question = """Your question here"""
+# A simple time series anomaly detection task
+question = """The following data represents the hourly electricity consumption (in kWh) of an office building over a 24-hour period, starting from midnight (00:00).
+Data: [12.5, 11.8, 12.1, 11.5, 12.2, 11.9, 15.6, 32.4, 35.1, 34.8, 36.2, 65.5, 37.0, 35.5, 34.2, 33.9, 35.1, 31.8, 18.2, 14.5, 13.1, 12.8, 12.4, 11.9]
+Task: 1. Specify the hour (0-23) when the anomaly occurs. 2. Provide a brief reasoning why you consider it an anomaly."""
+
 messages = [
     {"role": "system", "content": "You are an expert in time series understanding and reasoning."},
     {"role": "user", "content": question}
@@ -36,7 +39,7 @@ text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_pr
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
 # Generate reasoning output
-generated_ids = model.generate(**model_inputs, max_new_tokens=2048, temperature=0.7)
+generated_ids = model.generate(**model_inputs, max_new_tokens=512, temperature=0.7)
 
 response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 print(response)
