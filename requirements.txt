@@ -1,0 +1,11 @@
+transformers==4.57.1
+torch>=2.1
+tqdm>=4.66
+pyyaml>=6.0
+pandas>=2.0
+openai>=1.0
+numpy>=1.23
+tokenizers>=0.15
+safetensors>=0.4
+huggingface-hub>=0.20
+accelerate>=0.26
