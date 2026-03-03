@@ -1,10 +1,10 @@
 # <img src="assets/icon.png" height="32" style="vertical-align: middle;"> Thoth: Mid-Training Bridges LLMs to Time Series Understanding
 
-[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg?logo=arxiv)]()
+[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2603.01042)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Code-black?logo=github)](https://github.com/thuml/Thoth)
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-Model-F8D44E.svg?logo=huggingface)](https://huggingface.co/thuml/Thoth-30B-A3B)
 
-This is the official repository for the paper [Thoth: Mid-Training Bridges LLMs to Time Series Understanding]().
+This is the official repository for the paper [Thoth: Mid-Training Bridges LLMs to Time Series Understanding](https://arxiv.org/abs/2603.01042).
 
 ## 📄 Introduction
 
@@ -12,7 +12,7 @@ While Large Language Models (LLMs) demonstrate exceptional proficiency in genera
 
 ![intro](assets/intro.png)
 
-For more details, please check our [paper]().
+For more details, please check our [paper](https://arxiv.org/abs/2603.01042).
 
 ## ✨ Quickstart
 
@@ -72,8 +72,13 @@ bash ./scripts/Thoth.sh
 
 If you find our work useful, please cite our paper as:
 
-```
-
+```bibtex
+@article{lin2026thoth,
+  title={Thoth: Mid-Training Bridges LLMs to Time Series Understanding},
+  author={Lin, Jiafeng and Wang, Yuxuan and Wu, Jialong and Luo, Huakun and Pei, Zhongyi and Wang, Jianmin},
+  journal={arXiv preprint arXiv:2603.01042},
+  year={2026}
+}
 ```
 
 ## 🤝 Contact
